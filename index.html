@@ -78,6 +78,7 @@
             try {
                 console.log(window)
                 console.log(webkit)
+                alert('로그인 클릭 완료!')
                 window.webkit.messageHandlers.submitToiOS.postMessage(userData);
                 console.log('webkit')
             } catch(err) {
