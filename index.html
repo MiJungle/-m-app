@@ -73,7 +73,7 @@
             console.log("name", name)
             console.log("email", email)
             try {
-                webkit.messageHandlers.sumbitToiOS.postMessage(userData);
+                window.webkit.messageHandlers.sumbitToiOS.postMessage(name);
             } catch(err) {
                 console.log('error');
             }
