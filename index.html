@@ -66,16 +66,18 @@
     </div>
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/main.js" type="module"></script>
     <script>
         function sendEmail(){
             const name = $("#name").val()
             const email = $("#email").val()
             const userData = {"name" : name,"email":email }
-            console.log('수정')
+            console.log('수정2')
             console.log("name", name)
             console.log("email", email)
             try {
-                window.webkit.messageHandlers.sumbitToiOS.postMessage(name);
+                webkit.messageHandlers.submitToiOS.postMessage(userData);
+                console.log('webkit')
             } catch(err) {
                 console.log('error');
             }
