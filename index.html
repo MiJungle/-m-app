@@ -76,6 +76,8 @@
             console.log("name", name)
             console.log("email", email)
             try {
+                console.log(window)
+                console.log(webkit)
                 window.webkit.messageHandlers.submitToiOS.postMessage(userData);
                 console.log('webkit')
             } catch(err) {
@@ -84,6 +86,7 @@
         }
 
         function getName(jsonData){
+            alert('로그인 성공')
             console.log('jsonData =' , jsonData);
             const name = JSON.parse(jsonData);
             const welcome = name + " 님 환영합니다"
