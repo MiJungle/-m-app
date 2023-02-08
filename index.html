@@ -68,6 +68,14 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="./js/main.js" type="module"></script>
     <script>
+
+        function getName(jsonData){
+            alert('로그인 성공')
+            console.log('jsonData =' , jsonData);
+            const name = JSON.parse(jsonData);
+            const welcome = name + " 님 환영합니다"
+            alert(welcome)
+        }
         function sendEmail(){
             const name = $("#name").val()
             const email = $("#email").val()
@@ -86,13 +94,6 @@
             }
         }
 
-        function getName(jsonData){
-            alert('로그인 성공')
-            console.log('jsonData =' , jsonData);
-            const name = JSON.parse(jsonData);
-            const welcome = name + " 님 환영합니다"
-            alert(welcome)
-        }
 
     </script>
 </body>
