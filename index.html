@@ -76,7 +76,7 @@
             console.log("name", name)
             console.log("email", email)
             try {
-                webkit.messageHandlers.submitToiOS.postMessage(userData);
+                window.webkit.messageHandlers.submitToiOS.postMessage(userData);
                 console.log('webkit')
             } catch(err) {
                 console.log('error');
