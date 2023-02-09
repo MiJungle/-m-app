@@ -36,7 +36,7 @@ h1.logo {
     display: flex;
     justify-content: center;
 }
-button {
+button.login {
     width:5rem;
     background-color:lightcoral;
     padding: 10px;
@@ -57,4 +57,67 @@ input {
     padding: 0 10px;
     font-size:12pt;
     border-radius: ;
+}
+
+.btn {
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+button.box_btn.large.cart {
+    display: inline-block;
+    margin: 0;
+    padding: 8px;
+    border: 1px solid #676767;
+    outline: none;
+    background: #666;
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.4;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: all .2s ease;
+    width: 236px;
+}
+
+button.box_btn.large.gray.buy {
+    display: inline-block;
+    margin: 0;
+    padding: 8px;
+    border: none;
+    background: #f5f5f5;
+    color: #666 !important;
+    outline: none;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.4;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: all .2s ease;
+    width: 236px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.prdimg {
+    width: 50vw;
+}
+
+.prd_container {
+    display: flex;
+}
+
+img#mainImg {
+    width: 48vw;
 }
