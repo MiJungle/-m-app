@@ -1,0 +1,13 @@
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#books {
+    display: flex;
+    flex-wrap: wrap;
+}
+.book {
+    width: 20vw;
+}
+.book_title {
+    font-weight: bold;
+}

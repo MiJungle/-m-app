@@ -4,6 +4,7 @@ export const add = (numbers) => {
     }, 0);
 }
 
+const REST_API_KEY = "37b97e7c16e1ed8a39ab8f1a96fc4360"
 export function getData(){
     $.ajax({
     method: "GET",
@@ -12,11 +13,8 @@ export function getData(){
         query: "호모사피엔스",
     },
     headers: {
-        Authorization: "KakaoAK 37b97e7c16e1ed8a39ab8f1a96fc4360"
+        Authorization: `KakaoAK ${REST_API_KEY}`
     },
 })
-    .done(function (msg) {
-        console.log(msg);
-    });
-return
+
 }
