@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
 }
-.book {
+div.book {
     width: 20vw;
 }
 .book_title {

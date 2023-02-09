@@ -22,11 +22,12 @@
                 Authorization: `KakaoAK ${REST_API_KEY}`
             },
             success : function(data) {
+                // console.log(data)
                 $.each(data.documents, function (index, item) { // 데이터 =item
                     const thumbnail = `<img classname="book_thumbnail" src=${item.thumbnail}/>`
-                    const title = `<div classname="book_title">${item.title}</div>`
+                    const title = `<div classname="book_title" style="font-weight: bold;">${item.title}</div>`
                     const book_contents = `<div classname="book_contents">${wrapText(item.contents)}...</div>`
-                    $("#books").append(`<div classname="book">${thumbnail} ${title} ${book_contents}</div>`); //
+                    $("#books").append(`<div classname="book" style="width:45vw;display: flex; flex-wrap:wrap; gap:3px ;" onclick="window.location.href='${item.url}';">${thumbnail} ${title} ${book_contents}</div>`); //
                 })
             },
             error: function(){
@@ -44,8 +45,5 @@
     <div style="color: orange;"> 책 검색 결과</div>
     <div id="books">
     </div>
-
-
-
 </body>
 </html>
