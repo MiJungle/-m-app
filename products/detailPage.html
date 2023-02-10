@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <title>detailpage</title>
     <link rel="stylesheet" type="text/css" href="../index.css" />
+    <link rel="stylesheet" type="text/css" href="./detailPage.css" />
   </head>
   <body>
-    <div class="prd_container">
+    <div class="prd-container">
       <div class="prdimg">
         <img id="mainImg"
         src="https://img.mall.seconddoctor.co.kr/_data/product/202212/30/cabdbe73222e3562b30e9162cdf604dd.png"
@@ -30,8 +31,8 @@
             <col />
           </colgroup>
           <tbody>
-            <tr class="con_tr active">
-              <th scope="row" class="price_name">판매가</th>
+            <tr class="con-tr active">
+              <th scope="row" class="price-name">판매가</th>
               <td class="consumer">
                 <del><strong>5,000</strong>원</del>
 
@@ -40,35 +41,35 @@
             </tr>
 
             <tr>
-              <th scope="row" class="vtop price_name">할인가</th>
+              <th scope="row" class="vtop price-name">할인가</th>
               <td>
                 <div class="sell"><strong>4,500</strong>원</div>
 
-                <div id="event_layer" class="event_layer">
+                <div id="event-layer" class="event-layer">
                   <h2>할인내역</h2>
-                  <div class="discount_info">
+                  <div class="discount-info">
                     적립금, 할인쿠폰을 모두 적용한
                     <strong>최대 할인금액</strong>입니다.
                   </div>
-                  <div class="discount_info2">
+                  <div class="discount-info2">
                     (쿠폰 다운로드 시 혜택적용을 받을 수 있습니다.)
                   </div>
                   <div style="padding-top: 10px">
                     <span class="subtitle first">총 할인액</span>
-                    <span class="price_wrap first">
+                    <span class="price-wrap first">
                       <span class="color price">0</span>원
                     </span>
                   </div>
                   <div>
                     <span class="subtitle">적립금</span>
-                    <span class="price_wrap">
+                    <span class="price-wrap">
                       <span class="price">0</span>원
                     </span>
                   </div>
 
                   <div>
                     <span class="subtitle last">잔여 할인금액</span>
-                    <span class="price_wrap">
+                    <span class="price-wrap">
                       <span class="price">0</span>원
                     </span>
                   </div>
@@ -103,31 +104,31 @@
             <tr>
               <th scope="row">수량</th>
               <td>
-                <div class="box_qty">
+                <div class="box-qty">
                   <input
                     type="text"
                     name="buy_ea"
                     value="1"
-                    class="form_input"
+                    class="form-input"
                     onkeyup="javascript:eaChg2();"
                     id="form_input"
                     isplaceholderinited="true"
                   />
-                  <div class="btn_ea">
-                    <a href="javascript:eaChg(1);" class="ea_up"></a>
-                    <a href="javascript:eaChg(2);" class="ea_down"></a>
+                  <div class="btn-ea">
+                    <a href="javascript:eaChg(1);" class="ea-up"></a>
+                    <a href="javascript:eaChg(2);" class="ea-down"></a>
                   </div>
                 </div>
               </td>
             </tr>
-            <input type="hidden" name="option_necessary1" value="Y" />
-            <input type="hidden" name="option_type1" value="2" />
-            <input type="hidden" name="option_name1" value="스무디 단품" />
-            <input type="hidden" name="option_prc1" value="0" />
-            <input type="hidden" name="option_how_cal1" value="1" />
-            <input type="hidden" name="option_sel_item1" value="" />
-            <input type="hidden" name="option_ea_ck1" value="N" />
-            <input type="hidden" name="option_ea_num1" value="" />
+            <input type="hidden" name="option-necessary1" value="Y" />
+            <input type="hidden" name="option-type1" value="2" />
+            <input type="hidden" name="option-name1" value="스무디 단품" />
+            <input type="hidden" name="option-prc1" value="0" />
+            <input type="hidden" name="option-how-cal1" value="1" />
+            <input type="hidden" name="option-sel-item1" value="" />
+            <input type="hidden" name="option-ea-ck1" value="N" />
+            <input type="hidden" name="option-ea-num1" value="" />
             <tr>
               <th scope="row">스무디 단품</th>
               <td>
@@ -137,7 +138,7 @@
                   data-necessary="Y"
                   data-type="2A"
                   data-name="스무디 단품"
-                  class="wing_multi_option pno3965 necessary_Y"
+                  class="wing-multi-option pno3965 necessary-Y"
                   data-pno="3965"
                 >
                   <option value="">::스무디 단품::</option>
@@ -171,18 +172,15 @@
           </tbody>
         </table>
         <div class="btn">
-          <button class="box_btn large cart" onclick="handleAddCart()">
+          <button class="btn-add-cart" onclick="handleAddCart()">
             장바구니
           </button>
-          <button class="box_btn large gray buy" onclick="handleBuyNow()">
-            바로구매
-          </button>
+          <button class="btn-buy-now" onclick="handleBuyNow()">바로구매</button>
         </div>
       </div>
     </div>
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="./main.js" type="module"></script>
     <script>
       function handleAddCart() {
         const addCartMessage = "장바구니에 추가되었습니다.";
