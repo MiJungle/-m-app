@@ -100,9 +100,10 @@
             }
         }
         function handleSearch(){
-            const searchQuery = $("#search").val()
+            let searchQuery = $("#search").val()
             localStorage.setItem("searchQuery", JSON.stringify(searchQuery));
-            location.href = `/books/searchResult.html`
+            location.href = `/books/searchResult.html`;
+            $("#search").val('');
         }
 
 
