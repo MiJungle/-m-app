@@ -30,13 +30,13 @@
           // console.log(data)
           $.each(data.documents, function (index, item) {
             // 데이터 =item
-            const thumbnail = `<img classname="book-thumbnail" src=${item.thumbnail} alt="/public/images/nothumbnail.svg"/>`;
-            const title = `<div classname="book-title" style="font-weight: bold; text-align: center;">${item.title}</div>`;
-            const book_contents = `<div classname="book-contents">${wrapText(
+            const thumbnail = `<img class="book-thumbnail" src=${item.thumbnail} alt="/public/images/nothumbnail.svg"/>`;
+            const title = `<div class="book-title" style="font-weight: bold; text-align: center;">${item.title}</div>`;
+            const book_contents = `<div class="book-contents">${wrapText(
               item.contents
             )}...</div>`;
             $("#books").append(`
-                        <div classname="book"
+                        <div class="book"
                             style="width:45vw ;display: flex; flex-wrap:wrap; gap:3px ; align-items:center; flex-direction:column;"
                             onclick="window.location.href='${item.url}';">
                         ${thumbnail} ${title} ${book_contents}
@@ -54,7 +54,7 @@
     </script>
   </head>
   <body>
-    <div classname="page-title">
+    <div class="page-title">
       <img src="/public/images/book.svg" alt="검색 결과" />
     </div>
     <div id="books"></div>

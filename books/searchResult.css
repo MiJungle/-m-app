@@ -8,6 +8,7 @@ div.page-title {
 #books {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .page-title {
@@ -15,4 +16,6 @@ div.page-title {
   justify-content: center;
   padding: 3pt 0;
   background-color: whitesmoke;
+  height: 18pt;
+  margin: 5pt 0;
 }
