@@ -30,7 +30,7 @@
           // console.log(data)
           $.each(data.documents, function (index, item) {
             // 데이터 =item
-            const thumbnail = `<img classname="book-thumbnail" src=${item.thumbnail} alt="/-m-app/public/images/nothumbnail.svg"/>`;
+            const thumbnail = `<img classname="book-thumbnail" src=${item.thumbnail} alt="/public/images/nothumbnail.svg"/>`;
             const title = `<div classname="book-title" style="font-weight: bold; text-align: center;">${item.title}</div>`;
             const book_contents = `<div classname="book-contents">${wrapText(
               item.contents
@@ -55,7 +55,7 @@
   </head>
   <body>
     <div classname="page-title">
-      <img src="/-m-app/public/images/book.svg" alt="검색 결과" />
+      <img src="/public/images/book.svg" alt="검색 결과" />
     </div>
     <div id="books"></div>
   </body>
