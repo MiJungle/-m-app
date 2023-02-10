@@ -1,6 +1,14 @@
 * {
   font-family: "Noto Sans KR", sans-serif;
 }
+
+@media only screen and (min-width: 1280px) {
+  #books {
+    margin: 20px;
+    justify-content: center;
+  }
+}
+
 div.page-title {
   display: flex;
   background-color: orange;
