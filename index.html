@@ -8,11 +8,20 @@
     <meta property="og:url" content="https://m-app.shop/"/>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" type="text/css" href="src/css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+
+
+<body >
+<nav class="nav">
+    <a href="/" class="nav__link" data-link>Dashboard</a>
+    <a href="/posts" class="nav__link" data-link>Posts</a>
+    <a href="/login" class="nav__link" data-link>Login</a>
+</nav>
+<div id="app">
     <div id="header">
         <div class="gnb">
             <div class="wrap-inner">
@@ -69,8 +78,10 @@
 
     </div>
     </div>
+</div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="../WebstormProjects/seconddoctor/main.js" type="module"></script>
+    <script type="module" src="js/index.js" ></script>
     <script>
 
         function getName(){

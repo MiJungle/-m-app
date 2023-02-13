@@ -1,5 +1,5 @@
 import AbstractView from "./AbstractView.js";
-// import "../css/Login.css";
+// import "../css/login.css";
 export default class extends AbstractView {
   constructor(params) {
     super(params);
@@ -8,10 +8,10 @@ export default class extends AbstractView {
 
   async getHtml() {
     return `
-  <body>
+    <div class="login">
     <div class="container">
 <!--      <img class="login-logo" src="/src/public/images/medilogo.png" alt="logo"/>-->
-      <h2>반갑습니다!</h2>
+      <h2 class="login-text">반갑습니다!</h2>
       <input placeholder="아이디를 입력해 주세요." />
       <input placeholder="비밀번호를 입력해 주세요." />
       <div class="auto-login">
@@ -20,7 +20,7 @@ export default class extends AbstractView {
       </div>
       <button class="login-button">로그인</button>
     </div>
-  </body>
+    </div>
       `;
   }
 }
