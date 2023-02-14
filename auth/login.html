@@ -26,7 +26,7 @@
       </div>
       <button class="login-button" onclick="sendLoginInfo()">로그인</button>
       <button class="login-button" onclick="goToLoginList()">
-        로그인로그 보러가기
+        로그인 로그 보러가기
       </button>
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -52,7 +52,7 @@
       }
 
       function goToLoginList() {
-        console.log("goToLoginList 호출되었습니다.");
+        console.log("goToLoginList 호출되 습니다.");
         try {
           window.webkit.messageHandlers.goToLoginList.postMessage(loginInfo);
         } catch (err) {
