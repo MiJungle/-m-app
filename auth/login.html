@@ -25,6 +25,9 @@
         <div>자동 로그인</div>
       </div>
       <button class="login-button" onclick="sendLoginInfo()">로그인</button>
+      <button class="login-button" onclick="goToLoginList()">
+        로그인로그 보러가기
+      </button>
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript"></script>
@@ -46,6 +49,15 @@
         const status = JSON.parse(jsonData);
         console.log(status);
         confirm(status);
+      }
+
+      function goToLoginList() {
+        console.log("goToLoginList 호출되었습니다.");
+        try {
+          window.webkit.messageHandlers.goToLoginList.postMessage(loginInfo);
+        } catch (err) {
+          console.log("error");
+        }
       }
     </script>
   </body>
