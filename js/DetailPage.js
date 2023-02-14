@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>detailpage</title>
-    <link rel="stylesheet" type="text/css" href="../index.css" />
-    <link rel="stylesheet" type="text/css" href="detailPage.css" />
-  </head>
-  <body>
+import AbstractView from "./AbstractView.js";
+
+export default class extends AbstractView {
+  constructor() {
+    super();
+    this.setTitle("DetailPage");
+  }
+
+  async getHtml() {
+    return `
+<body>
     <div class="prd-container">
       <div class="prd-img">
         <img id="main-img"
@@ -198,4 +200,6 @@
       }
     </script>
   </body>
-</html>
+      `;
+  }
+}
