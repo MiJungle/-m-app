@@ -1,9 +1,13 @@
 import AbstractView from "./AbstractView.js";
+
 export default class extends AbstractView {
   constructor(params) {
     super(params);
-    this.setTitle("Landing");
+    this.setTitle("SearchResult");
   }
+
+  receivedQuery = JSON.parse(localStorage.getItem("searchQuery"));
+  REST_API_KEY = "37b97e7c16e1ed8a39ab8f1a96fc4360";
 
   async getHtml() {
     return `
@@ -17,7 +21,6 @@ export default class extends AbstractView {
                         <input id="name" placeholder="name" type="text">
                         <input id="email" placeholder="email" type="email">
                         <button class="login" onclick="sendEmail()">로그인</button>
-                        <a href="/login" class="nav__link" data-link><button class="login" onclick="sendEmail()">로그인 페이지로 이동</button></a>
                     </div>
                     <div class="menu">
                         <input id="search" type="text" placeholder="검색어를 입력해주세요">

@@ -25,13 +25,13 @@
   gap: 10px;
 }
 
-login input {
+.login input {
   border-radius: 7px;
   border: 1px solid #b3b2b2;
   padding: 12px 12px;
 }
 
-login input::placeholder {
+.login input::placeholder {
   color: #b3b2b2;
 }
 
