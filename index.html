@@ -81,7 +81,6 @@
 <!--    </div>-->
 <!--</div>-->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="../WebstormProjects/seconddoctor/main.js" type="module"></script>
     <script type="module" src="js/index.js" ></script>
     <script>
 
@@ -117,8 +116,24 @@
             location.href = `/books/searchResult.html`;
             $("#search").val('');
         }
-
-
+        function sendLoginInfo() {
+            const email = $(".login-email").val();
+            const pwd = $(".login-pwd").val();
+            const loginInfo = { email: email, password: pwd };
+            console.log("email", email);
+            console.log("password", pwd);
+            try {
+                window.webkit.messageHandlers.login.postMessage(loginInfo);
+            } catch (err) {
+                console.log("error");
+            }
+        }
+        function getLoginInfo(jsonData) {
+            console.log("함수가 호출되었습니다.");
+            const status = JSON.parse(jsonData);
+            console.log(status);
+            confirm(status);
+        }
     </script>
 </body>
 </html>

@@ -4,7 +4,18 @@ import DetailPage from "./DetailPage.js";
 import SearchResult from "./SearchResult.js";
 const pathToRegex = (path) =>
   new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
-
+function sendLoginInfo() {
+  const email = $(".login-email").val();
+  const pwd = $(".login-pwd").val();
+  const loginInfo = { email: email, password: pwd };
+  console.log("email", email);
+  console.log("password", pwd);
+  try {
+    window.webkit.messageHandlers.login.postMessage(loginInfo);
+  } catch (err) {
+    console.log("error");
+  }
+}
 const getParams = (match) => {
   const values = match.result.slice(1);
   const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(
