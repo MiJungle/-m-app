@@ -41,6 +41,13 @@
           console.log("error");
         }
       }
+
+      function getLoginInfo(jsonData) {
+        console.log("함수가 호출되었습니다.");
+        const status = JSON.parse(jsonData);
+        console.log(status);
+        alert(status);
+      }
     </script>
   </body>
 </html>
