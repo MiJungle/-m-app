@@ -18,7 +18,7 @@ window.getLoginInfo = (jsonData) => {
   const status = JSON.parse(jsonData);
   let userStatus = status["email"];
   if (userStatus == "200") {
-    location.href = `../template/dp.html`;
+    location.href = `index.html`;
   }
   console.log("email", userStatus);
   confirm(userStatus);
