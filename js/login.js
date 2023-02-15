@@ -16,11 +16,11 @@ window.sendLoginInfo = () => {
 window.getLoginInfo = (jsonData) => {
   console.log("함수가 호출되었습니다.");
   const status = JSON.parse(jsonData);
-  let userStatus = status["email"];
+  let userStatus = status["statusCode"];
   if (userStatus == "200") {
     location.href = "../index.html";
   }
-  console.log("email", userStatus);
+  console.log("statusCode", userStatus);
   confirm(userStatus);
 };
 
