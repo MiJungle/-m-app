@@ -2,14 +2,12 @@
   .prd-container {
     flex-direction: column;
     align-items: center;
-    #main-img: 100;
   }
 }
 @media only screen and (min-device-width: 320px) {
   .prd-container {
     flex-direction: column;
     align-items: center;
-    object-fit: fill;
   }
 }
 @media only screen and (min-device-width: 480px) {
@@ -30,6 +28,10 @@
     flex-direction: row;
     justify-content: center;
   }
+}
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .btn-add-cart {
@@ -90,3 +92,4 @@ img#main-img {
 .detail-img {
   width: 100%;
 }
+

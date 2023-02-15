@@ -1,10 +1,8 @@
-body {
+.login {
   display: flex;
   justify-content: center;
-  font-family: "Noto Sans KR", sans-serif;
-  height: 100vh;
 }
-h2 {
+.login-text {
   text-decoration: underline #c2d3ff 7px;
 }
 
@@ -27,13 +25,13 @@ h2 {
   gap: 10px;
 }
 
-input {
+.login input {
   border-radius: 7px;
   border: 1px solid #b3b2b2;
   padding: 12px 12px;
 }
 
-input::placeholder {
+.login input::placeholder {
   color: #b3b2b2;
 }
 
@@ -44,3 +42,4 @@ input::placeholder {
   color: white;
   padding: 15px 12px;
 }
+
