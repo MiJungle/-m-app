@@ -15,9 +15,11 @@ window.sendLoginInfo = () => {
 };
 window.getLoginInfo = (jsonData) => {
   console.log("함수가 호출되었습니다.");
+  console.log("jsonData", jsonData);
   const status = JSON.parse(jsonData);
-  console.log(status);
-  confirm(status);
+  let userStatus = status["email"];
+  console.log("email", userStatus);
+  confirm(userStatus);
 };
 
 window.goToLoginList = () => {
