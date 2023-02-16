@@ -3,6 +3,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -16,6 +17,7 @@ const config = {
     book: "./js/book.js",
     login: "./js/login.js",
     dp: "./js/dp.js",
+    health: "./js/health.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -39,16 +41,25 @@ const config = {
       filename: "template/login.html",
     }),
     new HtmlWebpackPlugin({
+      template: "/template/dp.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "template/dp.html",
+    }),
+    new HtmlWebpackPlugin({
       template: "/template/book.html",
       inject: true,
       chunks: ["index"],
       filename: "template/book.html",
     }),
     new HtmlWebpackPlugin({
-      template: "/template/dp.html",
+      template: "/template/health.html",
       inject: true,
       chunks: ["index"],
-      filename: "template/dp.html",
+      filename: "template/health.html",
+    }),
+    new CopyPlugin({
+      patterns: [{ from: "json", to: "json" }],
     }),
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
@@ -70,7 +81,6 @@ const config = {
           name: "[path][name].[ext]",
         },
       },
-
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
