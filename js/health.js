@@ -91,7 +91,7 @@ window.wrapText = (text) => {
 
 // json file
 
-window.getAllEmployees = () => {
+window.getAllMembers = () => {
   console.log("실행");
   $.ajax({
     url: "../json/login3.json",
@@ -126,7 +126,7 @@ window.getAllEmployees = () => {
 window.health = async () => {
   getUserInfo();
   await getJson();
-  await getAllEmployees();
+  await getAllMembers();
 };
 
 health();
