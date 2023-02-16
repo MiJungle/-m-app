@@ -5,6 +5,7 @@ window.sendLoginInfo = () => {
   const email = $(".login-email").val();
   const pwd = $(".login-pwd").val();
   const loginInfo = { email: email, password: pwd };
+
   console.log("email", email);
   console.log("password", pwd);
   try {
@@ -15,6 +16,7 @@ window.sendLoginInfo = () => {
 };
 window.getLoginInfo = (jsonData) => {
   console.log("함수가 호출되었습니다.");
+  console.log("수정 TEST");
   const status = JSON.parse(jsonData);
   let userStatus = status["statusCode"];
   if (userStatus == "200") {
