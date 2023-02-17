@@ -18,7 +18,8 @@ window.getLoginInfo = (jsonData) => {
   const status = JSON.parse(jsonData);
   let userStatus = status["statusCode"];
   if (userStatus == "200") {
-    location.href = "../index.html";
+    console.log("status 200 dp 이동");
+    location.href = "../template/dp.html";
   }
   console.log("statusCode", userStatus);
   confirm(userStatus);
