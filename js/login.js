@@ -17,12 +17,12 @@ window.getLoginInfo = (jsonData) => {
   console.log("함수가 호출되었습니다.");
   const status = JSON.parse(jsonData);
   let userStatus = status["statusCode"];
+  confirm(userStatus);
   if (userStatus == "200") {
     console.log("status 200 dp 이동");
     location.href = "../template/dp.html";
   }
   console.log("statusCode", userStatus);
-  confirm(userStatus);
 };
 
 window.goToLoginList = () => {
